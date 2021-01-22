@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Project>
+<ProjectName>D:\project\HEXAR\CPM_DFU_USB\\CPM_DFU_USB</ProjectName>
+<CMSIS>..\Drivers\CMSIS</CMSIS>
+<HAL_Driver>C:\Users\pjg\STM32Cube\Repository\STM32Cube_FW_F4_V1.18.0\Drivers\CMSIS</HAL_Driver>
+
+<Toolchain>EWARM</Toolchain>
+	<Toolversion>0</Toolversion>
+<Version>0</Version>
+
+<filestoremove>
+	<file>
+	</file>
+</filestoremove>
+
+<inctoremove>
+	<Aincludes>
+	   <include></include>
+    </Aincludes>
+	<Cincludes>
+    </Cincludes>
+</inctoremove>
+
+<configs>
+  <config>
+    <name>CPM_DFU_USB</name>				
+    <device>STM32F405RGTx</device>		 
+    <heapSize>0x800</heapSize>
+    <stackSize>0x400</stackSize>
+    
+    	<cpuclock>168</cpuclock>
+    	<board>custom</board>
+			
+    <usedDebug>true</usedDebug>
+    	<debugprobe>swd</debugprobe>
+    <optimization></optimization>
+    <icfloc>0</icfloc>
+    <Adefines>
+        <define></define>
+    </Adefines>   
+
+    <UsedFreeRTOS></UsedFreeRTOS>
+    <Aincludes>
+
+
+	    	<include></include>
+    </Aincludes>
+    <Cdefines>
+    </Cdefines>
+    <definestoremove>
+        <Adefines>
+            <define></define>
+        </Adefines>
+        <Cdefines>
+            <define>USE_FULL_LL_DRIVER</define>
+            <define>MBEDTLS_CONFIG_FILE=&quot;mbedtls_config.h&quot;</define>
+            <define>_TIMEVAL_DEFINED</define>
+            <define>_SYS_TIME_H_</define>
+        </Cdefines>         
+    </definestoremove>
+    
+	<Cincludes>
+	   <include>..\Inc</include>
+	   <include>..\Drivers\STM32F4xx_HAL_Driver\Inc</include>
+	   <include>..\Drivers\STM32F4xx_HAL_Driver\Inc\Legacy</include>
+	   <include>..\Middlewares\ST\STM32_USB_Host_Library\Core\Inc</include>
+	   <include>..\Middlewares\ST\STM32_USB_Host_Library\Class\MSC\Inc</include>
+	   <include>..\Drivers\CMSIS\Device\ST\STM32F4xx\Include</include>
+	   <include>..\Middlewares\Third_Party\FatFs\src</include>
+	   <include>..\Drivers\CMSIS\Include</include>
+
+    </Cincludes>
+      </config>
+    </configs> 
+
+    <underRoot>false</underRoot>
+
+      <group>
+        <name>Middlewares</name>  
+                    <group>
+                            <name>FatFs</name>
+                                            <file>
+                                                    <name>../Middlewares/Third_Party/FatFs/src/option/syscall.c</name>
+                                            </file>
+                                            <file>
+                                                    <name>../Middlewares/Third_Party/FatFs/src/diskio.c</name>
+                                            </file>
+                                            <file>
+                                                    <name>../Middlewares/Third_Party/FatFs/src/ff.c</name>
+                                            </file>
+                                            <file>
+                                                    <name>../Middlewares/Third_Party/FatFs/src/ff_gen_drv.c</name>
+                                            </file>
+                </group>
+                    <group>
+                            <name>USB_Host_Library</name>
+                                            <file>
+                                                    <name>../Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_core.c</name>
+                                            </file>
+                                            <file>
+                                                    <name>../Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_ctlreq.c</name>
+                                            </file>
+                                            <file>
+                                                    <name>../Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_ioreq.c</name>
+                                            </file>
+                                            <file>
+                                                    <name>../Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_pipes.c</name>
+                                            </file>
+                                            <file>
+                                                    <name>../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Src/usbh_msc.c</name>
+                                            </file>
+                                            <file>
+                                                    <name>../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Src/usbh_msc_bot.c</name>
+                                            </file>
+                                            <file>
+                                                    <name>../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Src/usbh_msc_scsi.c</name>
+                                            </file>
+                </group>
+      </group> 
+	   <group>
+	    <name>Drivers</name> 
+		   <group>
+		 		<name>STM32F4xx_HAL_Driver</name>
+						<file>
+							<name>../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_hcd.c</name>
+						</file>
+						<file>
+							<name>../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c</name>
+						</file>
+						<file>
+							<name>../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c</name>
+						</file>
+						<file>
+							<name>../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c</name>
+						</file>
+						<file>
+							<name>../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c</name>
+						</file>
+						<file>
+							<name>../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c</name>
+						</file>
+						<file>
+							<name>../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c</name>
+						</file>
+						<file>
+							<name>../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c</name>
+						</file>
+						<file>
+							<name>../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c</name>
+						</file>
+						<file>
+							<name>../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c</name>
+						</file>
+						<file>
+							<name>../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c</name>
+						</file>
+						<file>
+							<name>../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c</name>
+						</file>
+						<file>
+							<name>../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c</name>
+						</file>
+						<file>
+							<name>../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c</name>
+						</file>
+						<file>
+							<name>../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c</name>
+						</file>
+						<file>
+							<name>../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c</name>
+						</file>
+						<file>
+							<name>../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c</name>
+						</file>
+		    </group>
+		    <group>
+		    	<name>CMSIS</name>
+							<file>
+								<name>../Src/system_stm32f4xx.c</name>
+							</file>
+		    	</group>
+	  </group>   
+	  <group>
+	  <name>Application</name>
+	    <group>
+	      <name>User</name>  
+                                <file>
+                                 <name>..\Src\main.c</name>
+                                </file>
+
+                                <file>
+                                 <name>..\Src\usbh_diskio.c</name>
+                                </file>
+
+                                <file>
+                                 <name>..\Src\fatfs.c</name>
+                                </file>
+
+                                <file>
+                                 <name>..\Src\usb_host.c</name>
+                                </file>
+
+                                <file>
+                                 <name>..\Src\usbh_conf.c</name>
+                                </file>
+
+                                <file>
+                                 <name>..\Src\stm32f4xx_it.c</name>
+                                </file>
+
+                                <file>
+                                 <name>..\Src\stm32f4xx_hal_msp.c</name>
+                                </file>
+
+
+
+
+</group> 
+  </group>
+</Project>
